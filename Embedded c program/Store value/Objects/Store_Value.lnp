@@ -1,0 +1,3 @@
+".\Objects\Store_Value.obj" 
+TO ".\Objects\Store_Value" 
+PRINT(".\Listings\Store_Value.m51")

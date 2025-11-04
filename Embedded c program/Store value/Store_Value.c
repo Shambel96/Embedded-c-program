@@ -1,0 +1,9 @@
+# include<reg51.h>
+void main()
+{
+  P0=0x55;
+	P1=0x46;
+	P2=0x58;
+	P3=0x35;
+
+}

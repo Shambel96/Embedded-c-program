@@ -1,0 +1,70 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    10/07/2025  16:28:46  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\Store_Value.obj TO .\Objects\Store_Value PRINT (.\Listings\Store_Value.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Store_Value.obj (STORE_VALUE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\Store_Value (STORE_VALUE)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     000CH     UNIT         ?C_C51STARTUP
+            CODE    080CH     0004H     UNIT         ?PR?MAIN?STORE_VALUE
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Store_Value (STORE_VALUE)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?STORE_VALUE
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Store_Value (STORE_VALUE)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        STORE_VALUE
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  C:080CH         PUBLIC        main
+  -------         PROC          MAIN
+  C:080CH         LINE#         2
+  C:080CH         LINE#         3
+  C:080CH         LINE#         4
+  C:080FH         LINE#         6
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        STORE_VALUE
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  10/07/2025  16:28:46  PAGE 2
+
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0004H BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=19
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
