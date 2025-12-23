@@ -1,0 +1,133 @@
+C51 COMPILER V9.60.0.0   LCD                                                               11/26/2025 11:18:39 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE LCD
+OBJECT MODULE PLACED IN .\Objects\lcd.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE lcd.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\lcd.l
+                    -st) TABS(2) OBJECT(.\Objects\lcd.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          void lcdcmd(unsigned char);// Signature for command function
+   4          void lcddat(unsigned char);// Signature for data function
+   5          
+   6          sbit rs = P1^0; // Register Select: 0=Command, 1=Data
+   7          sbit rw = P1^1; // Read/Write: 0=Write, 1=Read
+   8          sbit en = P1^2; // Enable
+   9          
+  10          void delay(); // Signature for delay function
+  11          
+  12          void lcdcmd(unsigned char val){
+  13   1        P2 = val;
+  14   1        rs=0; // pass cmd rs logic 0
+  15   1        rw=0; // rw logic to 0
+  16   1        en=1; // enable make high to low with some time delay
+  17   1        delay();
+  18   1        en=0; // accept the command
+  19   1      }
+  20          
+  21          void lcddat(unsigned char val){
+  22   1        P2 = val;
+  23   1        rs=1; // change control line while passing data make rs logic 1
+  24   1        rw=0; // rw remain 0
+  25   1        en=1; 
+  26   1        delay();
+  27   1        en=0; // accept the data
+  28   1      }
+  29          
+  30          void delay(){
+  31   1        unsigned int i;
+  32   1        for (i=0;i<20000;i++);
+  33   1      }
+  34           
+  35          void main(){
+  36   1        P2 = 0x00;  //0xFF; output declaration d0-d7  connected with P2
+  37   1        while(1){
+  38   2          lcdcmd(0x38); // cmd value for declaration of dot matrix
+  39   2          delay();
+  40   2          lcdcmd(0x01); // cmd for clear screen
+  41   2          delay();
+  42   2          lcdcmd(0xE); // for cursor position and blinking
+  43   2          delay();
+  44   2          lcdcmd(0x0c); // for display on
+  45   2          delay();
+  46   2          lcdcmd(0x80); // force curso to first line first position
+  47   2          
+  48   2          delay();
+  49   2          lcddat('W');
+  50   2          delay();
+  51   2          lcddat('E');
+  52   2          delay();
+  53   2          lcddat('L');
+  54   2          delay();
+C51 COMPILER V9.60.0.0   LCD                                                               11/26/2025 11:18:39 PAGE 2   
+
+  55   2          lcddat('C');
+  56   2          delay();
+  57   2          lcddat('O');
+  58   2          delay();
+  59   2          lcddat('M');
+  60   2          delay();
+  61   2          lcddat('E');
+  62   2          delay();
+  63   2          lcddat(' ');
+  64   2          delay();
+  65   2          lcddat('T');
+  66   2          delay();
+  67   2          lcddat('O');
+  68   2          delay();
+  69   2          
+  70   2          lcdcmd(0xC0); // cmd for second line
+  71   2          
+  72   2          delay();
+  73   2          lcddat('A');
+  74   2          delay();
+  75   2          lcddat('Q');
+  76   2          delay();
+  77   2          lcddat('W');
+  78   2          delay();
+  79   2          lcddat('A');
+  80   2          delay();
+  81   2          lcddat('Q');
+  82   2          delay();
+  83   2          lcddat('A');
+  84   2          delay();
+  85   2          lcddat('M');
+  86   2          delay();
+  87   2          lcddat(' ');
+  88   2          delay();
+  89   2          lcddat('R');
+  90   2          delay();
+  91   2          lcddat('E');
+  92   2          delay();
+  93   2          lcddat('C');
+  94   2          delay();
+  95   2          lcddat('O');
+  96   2          delay();
+  97   2          lcddat('R');
+  98   2          delay();
+  99   2          lcddat('D');
+ 100   2          delay();
+ 101   2          lcddat('S');
+ 102   2          delay();
+ 103   2        }
+ 104   1      }
+ 105          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    287    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+C51 COMPILER V9.60.0.0   LCD                                                               11/26/2025 11:18:39 PAGE 3   
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

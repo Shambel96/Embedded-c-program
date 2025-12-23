@@ -1,0 +1,81 @@
+C51 COMPILER V9.60.0.0   TIMER                                                             11/12/2025 11:23:40 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE TIMER
+OBJECT MODULE PLACED IN .\Objects\timer.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE timer.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\tim
+                    -er.lst) TABS(2) OBJECT(.\Objects\timer.obj)
+
+line level    source
+
+   1          // write an 8051 C Program to toggle all the bits of 
+   2          // port P1 continuosly with some delay in between.
+   3          // Use time 0 16 - bit  mode to generate the delay.
+   4          
+   5          // 16 nit is m1, 13 bit is m0, m3 is 8/8 split, m2 is auto 8 bit
+   6          
+   7          // Gate means on/off
+   8          // 1. Timers Time
+   9          // fc  = 11.0592mhz, ft = fc/12 = 11.0592/12 = 0.9216mhz
+  10          // Tc = 1/fT = 1/0.9216 = 1.085microSec
+  11          // fc is digital frequency, ft is Timer frequency
+  12          
+  13          // Tc is clock time pulse.
+  14          
+  15          
+  16          // 2. Number of clock pulses
+  17          //  = 50mSec/1.085microSec = 46.0829x10^3 = 46082
+  18          
+  19          
+  20          // 3. THo and TLo
+  21          // mode 1 (16-bit)        THo TLo
+  22          // 2^16 = 65536 - 46082 = (19,454)10 is  decimal = (4bFE)16 is hexa
+  23          // 65536 is maximum clock pulse.
+  24          // THO = 4B, TLo = FE
+  25          
+  26          // Use timer 0 means C/T' = 0.
+  27          // Tmod
+  28          
+  29          #include <reg51.h>
+  30          
+  31          void delay(void);
+  32          
+  33          // unsigned char i;
+  34          
+  35          void main(){
+  36   1        while(1){
+  37   2          P1  = 0x55; // p1 = 0101 0101
+  38   2          delay();
+  39   2          P1 = 0xAA;  // p1 = 1010 1010
+  40   2          delay();
+  41   2        }
+  42   1      }
+  43          
+  44          void delay(void){
+  45   1        TMOD  = 0X01; // timer 0 in mode 1
+  46   1      //  TH0 = 0X35;
+  47   1      //  TL0 = 0X00;
+  48   1        TH0 = 0xAB; //0x4B;
+  49   1        TL0 = 0xCD; //0xFE;
+  50   1        TR0 = 1; // Timer Run bit = 1 Timer start
+  51   1        
+  52   1        while(TF0==0);  // Timer Flag Bit = 0
+  53   1          TR0 = 0;
+  54   1          TF0 = 0;
+C51 COMPILER V9.60.0.0   TIMER                                                             11/12/2025 11:23:40 PAGE 2   
+
+  55   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     33    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,76 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    10/15/2025  10:25:55  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\store_data.obj TO .\Objects\store_data_port PRINT (.\Listings\store_data_port.m51)
+>> 
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\store_data.obj (STORE_DATA)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\store_data_port (STORE_DATA)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     000DH     UNIT         ?PR?MAIN?STORE_DATA
+            CODE    080DH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\store_data_port (STORE_DATA)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?STORE_DATA
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\store_data_port (STORE_DATA)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        STORE_DATA
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:0800H         PUBLIC        main
+  -------         PROC          MAIN
+  C:0800H         LINE#         3
+  C:0800H         LINE#         4
+  C:0803H         LINE#         5
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/15/2025  10:25:55  PAGE 2
+
+
+  C:0806H         LINE#         6
+  C:0809H         LINE#         7
+  C:080CH         LINE#         8
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        STORE_DATA
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 000DH BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=28
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

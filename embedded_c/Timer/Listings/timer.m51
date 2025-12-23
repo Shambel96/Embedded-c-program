@@ -1,0 +1,94 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    11/12/2025  11:23:40  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\timer.obj TO .\Objects\timer PRINT (.\Listings\timer.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\timer.obj (TIMER)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\timer (TIMER)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0013H     UNIT         ?PR?DELAY?TIMER
+            CODE    0813H     000EH     UNIT         ?PR?MAIN?TIMER
+            CODE    0821H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\timer (TIMER)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?TIMER
+
+?PR?MAIN?TIMER
+  +--> ?PR?DELAY?TIMER
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\timer (TIMER)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        TIMER
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0800H         PUBLIC        delay
+  C:0813H         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  B:0088H.5       PUBLIC        TF0
+  D:008CH         PUBLIC        TH0
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/12/2025  11:23:40  PAGE 2
+
+
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  -------         PROC          MAIN
+  C:0813H         LINE#         35
+  C:0813H         LINE#         36
+  C:0813H         LINE#         37
+  C:0816H         LINE#         38
+  C:0819H         LINE#         39
+  C:081CH         LINE#         40
+  C:081FH         LINE#         41
+  -------         ENDPROC       MAIN
+  -------         PROC          DELAY
+  C:0800H         LINE#         44
+  C:0800H         LINE#         45
+  C:0803H         LINE#         48
+  C:0806H         LINE#         49
+  C:0809H         LINE#         50
+  C:080BH         LINE#         52
+  C:080EH         LINE#         53
+  C:0810H         LINE#         54
+  C:0812H         LINE#         55
+  -------         ENDPROC       DELAY
+  -------         ENDMOD        TIMER
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0021H BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=48
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

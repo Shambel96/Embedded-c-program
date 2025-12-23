@@ -1,0 +1,38 @@
+A51 MACRO ASSEMBLER  ROTATE_VALUE                                                         10/15/2025 10:49:46 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\rotate_value.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE rotate_value.asm SET(SMALL) DEBUG PRINT(.\Listings\rotate_value.lst) OB
+                      JECT(.\Objects\rotate_value.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+0000 7834              2     mov r0, #34h
+0002 7956              3     mov r1, #56h
+0004 7A78              4     mov r2, #78h
+0006 7B26              5     mov r3, #26h
+0008 E8                6     mov a, r0  
+0009 C9                7     xch a, r1  
+000A CA                8     xch a, r2  
+000B CB                9     xch a, r3  
+000C F8               10     mov r0, a  
+                      11     end
+                             
+                             
+                             
+A51 MACRO ASSEMBLER  ROTATE_VALUE                                                         10/15/2025 10:49:46 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

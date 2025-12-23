@@ -1,0 +1,97 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    11/05/2025  11:27:40  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\traffic.obj TO .\Objects\traffic PRINT (.\Listings\traffic.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\traffic.obj (TRAFFIC)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\traffic (TRAFFIC)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     002CH     UNIT         ?PR?MAIN?TRAFFIC
+            CODE    082CH     0012H     UNIT         ?PR?_DELAY?TRAFFIC
+            CODE    083EH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\traffic (TRAFFIC)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?TRAFFIC
+
+?PR?MAIN?TRAFFIC
+  +--> ?PR?_DELAY?TRAFFIC
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\traffic (TRAFFIC)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        TRAFFIC
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:082CH         PUBLIC        _delay
+  B:0090H.2       PUBLIC        green
+  B:0090H.1       PUBLIC        yellow
+  C:0800H         PUBLIC        main
+  B:0090H.0       PUBLIC        red
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/05/2025  11:27:40  PAGE 2
+
+
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        qoyta
+  -------         DO            
+  D:0004H         SYMBOL        i
+  -------         ENDDO         
+  C:082CH         LINE#         9
+  C:082CH         LINE#         11
+  C:083DH         LINE#         12
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  C:0800H         LINE#         14
+  C:0800H         LINE#         16
+  C:0806H         LINE#         18
+  C:0806H         LINE#         20
+  C:0808H         LINE#         21
+  C:080FH         LINE#         22
+  C:0812H         LINE#         24
+  C:0814H         LINE#         27
+  C:0816H         LINE#         28
+  C:081DH         LINE#         29
+  C:081FH         LINE#         32
+  C:0821H         LINE#         33
+  C:0828H         LINE#         34
+  C:082AH         LINE#         35
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        TRAFFIC
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 003EH BYTE ( 3%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=77
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

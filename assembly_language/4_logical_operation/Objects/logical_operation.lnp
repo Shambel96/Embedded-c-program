@@ -1,0 +1,3 @@
+".\Objects\logical_operation.obj" 
+TO ".\Objects\logical_operation" 
+PRINT(".\Listings\logical_operation.m51")

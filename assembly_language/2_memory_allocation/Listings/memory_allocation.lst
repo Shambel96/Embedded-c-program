@@ -1,0 +1,31 @@
+A51 MACRO ASSEMBLER  MEMORY_ALLOCATION                                                    10/15/2025 11:50:34 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\memory_allocation.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE memory_allocation.asm SET(SMALL) DEBUG PRINT(.\Listings\memory_allocati
+                      on.lst) OBJECT(.\Objects\memory_allocation.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 7454              1     MOV a, #54h
+0002 7855              2     mov r0, #55h
+0004 F522              3     mov 22h, a
+0006 8826              4     mov 26h,r0
+                       5     ;mov r1,  #45h
+                       6     ;mov r2, #36h
+                       7     end
+A51 MACRO ASSEMBLER  MEMORY_ALLOCATION                                                    10/15/2025 11:50:34 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

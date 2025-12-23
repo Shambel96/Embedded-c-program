@@ -1,0 +1,146 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    10/29/2025  11:47:09  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\LED.obj TO .\Objects\LED PRINT (.\Listings\LED.m51) CODE (0X0000-0X0FFF)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\LED.obj (LED)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\LED (LED)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0068H     UNIT         ?PR?MAIN?LED
+            CODE    0868H     001DH     UNIT         ?PR?_DELAY?LED
+            CODE    0885H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\LED (LED)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?LED
+
+?PR?MAIN?LED
+  +--> ?PR?_DELAY?LED
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\LED (LED)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LED
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  C:086CH         PUBLIC        _delay
+  C:0800H         PUBLIC        main
+  B:00A0H.0       PUBLIC        led1
+  B:00A0H.1       PUBLIC        led2
+  B:00A0H.2       PUBLIC        led3
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/29/2025  11:47:09  PAGE 2
+
+
+  B:00A0H.3       PUBLIC        led4
+  B:00A0H.4       PUBLIC        led5
+  B:00A0H.5       PUBLIC        led6
+  B:00A0H.6       PUBLIC        led7
+  B:00A0H.7       PUBLIC        led8
+  C:0868H         SYMBOL        L?0012
+  -------         PROC          L?0011
+  -------         ENDPROC       L?0011
+  C:0868H         SYMBOL        L?0012
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        count
+  -------         DO            
+  D:0004H         SYMBOL        i
+  -------         ENDDO         
+  C:086CH         LINE#         8
+  C:086CH         LINE#         11
+  C:0870H         LINE#         12
+  C:0874H         LINE#         13
+  C:0874H         LINE#         14
+  C:087DH         LINE#         15
+  C:0882H         LINE#         16
+  C:0884H         LINE#         17
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  C:0800H         LINE#         28
+  C:0800H         LINE#         29
+  C:0803H         LINE#         30
+  C:0803H         LINE#         36
+  C:0805H         LINE#         37
+  C:0807H         LINE#         38
+  C:080AH         LINE#         39
+  C:080CH         LINE#         40
+  C:080EH         LINE#         41
+  C:0811H         LINE#         43
+  C:0813H         LINE#         44
+  C:0815H         LINE#         45
+  C:0818H         LINE#         46
+  C:081AH         LINE#         47
+  C:081CH         LINE#         48
+  C:081FH         LINE#         50
+  C:0821H         LINE#         51
+  C:0823H         LINE#         52
+  C:0826H         LINE#         53
+  C:0828H         LINE#         54
+  C:082AH         LINE#         55
+  C:082DH         LINE#         57
+  C:082FH         LINE#         58
+  C:0831H         LINE#         59
+  C:0834H         LINE#         60
+  C:0836H         LINE#         61
+  C:0838H         LINE#         62
+  C:083BH         LINE#         63
+  C:083DH         LINE#         64
+  C:083FH         LINE#         65
+  C:0842H         LINE#         66
+  C:0844H         LINE#         67
+  C:0846H         LINE#         68
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/29/2025  11:47:09  PAGE 3
+
+
+  C:0849H         LINE#         69
+  C:084BH         LINE#         70
+  C:084DH         LINE#         71
+  C:0850H         LINE#         72
+  C:0852H         LINE#         73
+  C:0854H         LINE#         74
+  C:0857H         LINE#         75
+  C:0859H         LINE#         76
+  C:085BH         LINE#         77
+  C:085EH         LINE#         78
+  C:0860H         LINE#         79
+  C:0862H         LINE#         80
+  C:0865H         LINE#         84
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LED
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0085H BYTE ( 6%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=148
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

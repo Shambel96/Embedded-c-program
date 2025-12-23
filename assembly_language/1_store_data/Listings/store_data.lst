@@ -1,0 +1,36 @@
+A51 MACRO ASSEMBLER  STORE_DATA                                                           10/15/2025 10:28:18 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\store_data.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE store_data.asm SET(SMALL) DEBUG PRINT(.\Listings\store_data.lst) OBJECT
+                      (.\Objects\store_data.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 7485              1     MOV a, #85H
+0002 75F082            2     MOV b, #82H
+0005 7856              3     MOV R0, #56H
+0007 7946              4     MOV R1, #46H
+0009 7A35              5     MOV R2, #35H
+000B 7B26              6     MOV R3, #26H
+000D 7C10              7     MOV R4, #10H
+000F 7D86              8     MOV R5, #86H
+0011 7E96              9     MOV R6, #96H
+                      10     ;MOV R7, #25H
+                      11     end
+A51 MACRO ASSEMBLER  STORE_DATA                                                           10/15/2025 10:28:18 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

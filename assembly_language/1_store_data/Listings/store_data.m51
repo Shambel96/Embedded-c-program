@@ -1,0 +1,49 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    10/15/2025  10:28:18  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\store_data.obj TO .\Objects\store_data PRINT (.\Listings\store_data.m51)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\store_data.obj (STORE_DATA)
+
+
+LINK MAP OF MODULE:  .\Objects\store_data (STORE_DATA)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0013H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\store_data (STORE_DATA)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        STORE_DATA
+  D:00F0H         SYMBOL        B
+  C:0000H         LINE#         65533
+  C:0002H         LINE#         2
+  C:0005H         LINE#         3
+  C:0007H         LINE#         4
+  C:0009H         LINE#         5
+  C:000BH         LINE#         6
+  C:000DH         LINE#         7
+  C:000FH         LINE#         8
+  C:0011H         LINE#         9
+  -------         ENDMOD        STORE_DATA
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0013H BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=19
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

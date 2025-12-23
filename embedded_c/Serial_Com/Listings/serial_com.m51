@@ -1,0 +1,83 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    11/19/2025  11:28:50  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\serial_com.obj TO .\Objects\serial_com PRINT (.\Listings\serial_com.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\serial_com.obj (SERIAL_COM)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\serial_com (SERIAL_COM)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0019H     UNIT         ?PR?MAIN?SERIAL_COM
+            CODE    0819H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\serial_com (SERIAL_COM)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?SERIAL_COM
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\serial_com (SERIAL_COM)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SERIAL_COM
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  B:0098H.1       PUBLIC        TI
+  C:0800H         PUBLIC        main
+  D:0099H         PUBLIC        SBUF
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:008DH         PUBLIC        TH1
+  B:0088H.6       PUBLIC        TR1
+  -------         PROC          MAIN
+  C:0800H         LINE#         3
+  C:0800H         LINE#         4
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/19/2025  11:28:50  PAGE 2
+
+
+  C:0800H         LINE#         7
+  C:0803H         LINE#         10
+  C:0806H         LINE#         13
+  C:0809H         LINE#         15
+  C:080BH         LINE#         16
+  C:080EH         LINE#         17
+  C:0811H         LINE#         18
+  C:0814H         LINE#         19
+  C:0816H         LINE#         20
+  C:0818H         LINE#         22
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        SERIAL_COM
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0019H BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=40
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

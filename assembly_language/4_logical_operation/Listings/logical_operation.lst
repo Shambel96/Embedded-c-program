@@ -1,0 +1,40 @@
+A51 MACRO ASSEMBLER  LOGICAL_OPERATION                                                    10/15/2025 11:26:07 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\logical_operation.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE logical_operation.asm SET(SMALL) DEBUG PRINT(.\Listings\logical_operati
+                      on.lst) OBJECT(.\Objects\logical_operation.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+0000 7445              2     mov a, #45h    
+0002 7867              3     mov r0, #67h  
+0004 58                4     anl a, r0    
+0005 F520              5     mov 20h, a  
+0007 7445              6     mov a, #45h 
+0009 48                7     orl a, r0    
+000A F521              8     mov 21h, a  
+000C 7445              9     mov a, #45h          
+000E 68               10     xrl a, r0  
+                      11     
+000F F522             12     mov 22h, a  
+0011 7445             13     mov a,  #45h
+0013 F4               14     cpl a  
+0014 F523             15     mov 23h, a
+                      16     end
+A51 MACRO ASSEMBLER  LOGICAL_OPERATION                                                    10/15/2025 11:26:07 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

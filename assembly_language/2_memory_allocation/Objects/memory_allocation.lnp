@@ -1,0 +1,3 @@
+".\Objects\memory_allocation.obj" 
+TO ".\Objects\memory_allocation" 
+PRINT(".\Listings\memory_allocation.m51")

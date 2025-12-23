@@ -1,0 +1,96 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    11/12/2025  12:13:34  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\7_segment.obj TO .\Objects\7_segment PRINT (.\Listings\7_segment.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\7_segment.obj (7_SEGMENT)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?COPY)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  .\Objects\7_segment (7_SEGMENT)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000BH     UNIT         _DATA_GROUP_
+            IDATA   0013H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     010CH     UNIT         ?C?LIB_CODE
+            CODE    090CH     0049H     UNIT         ?PR?MAIN?7_SEGMENT
+            CODE    0955H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0961H     000AH     UNIT         ?CO?7_SEGMENT
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\7_segment (7_SEGMENT)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?7_SEGMENT
+
+?PR?MAIN?7_SEGMENT             0008H    000BH
+  +--> ?CO?7_SEGMENT
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\7_segment (7_SEGMENT)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        7_SEGMENT
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:090CH         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/12/2025  12:13:34  PAGE 2
+
+
+  C:0961H         SYMBOL        _?ix1000
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        seg
+  D:0012H         SYMBOL        x
+  D:0082H         SYMBOL        i
+  -------         ENDDO         
+  C:090CH         LINE#         5
+  C:090CH         LINE#         6
+  C:091FH         LINE#         11
+  C:0922H         LINE#         13
+  C:0922H         LINE#         14
+  C:0930H         LINE#         15
+  C:0938H         LINE#         16
+  C:0951H         LINE#         17
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        7_SEGMENT
+
+  -------         MODULE        ?C?COPY
+  C:08D0H         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+
+  -------         MODULE        ?C?SLCMP
+  C:08F6H         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0053H BYTE ( 4%) *
+******************************************************************************
+
+Program Size: data=20.0 xdata=0 code=366
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

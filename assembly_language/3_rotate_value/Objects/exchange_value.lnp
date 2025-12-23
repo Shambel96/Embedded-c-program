@@ -1,0 +1,3 @@
+".\Objects\rotate_value.obj" 
+TO ".\Objects\exchange_value" 
+PRINT(".\Listings\exchange_value.m51")
